@@ -1,3 +1,3 @@
-# xolve
+# integral
 
 Personal Website
