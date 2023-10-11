@@ -52,6 +52,28 @@ document.addEventListener("alpine:init", () => {
             One of the main objective of this project was to learn how to work in a team using the SCRUM framework and gain insights into git and github.       
                  `,
           },
+          {
+            id: "palim",
+            title: "Palim",
+            github: "https://github.com/Rodolphe27/palim-program",
+            image:
+              "https://i.stack.imgur.com/NArLh.png",
+            description: `
+            Palim is a parallel file content search tool written in C. It allows you to search for a specific string in the content of files within a directory tree and provides statistics about the search process. 
+            This tool is designed to take advantage of multithreading to efficiently search through a large number of files and directories       
+                 `,
+          },
+          {
+            id: "linkedlist",
+            title: "LinkedList",
+            github: "https://github.com/Rodolphe27/linkedlist",
+            image:
+              "https://miro.medium.com/v2/resize:fit:2000/1*to0Tp8CBi-vbKvu-ljPukg.png",
+            description: `
+            This Python program demonstrates the implementation of a singly linked list data structure. A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node in the sequence.
+             This implementation allows you to create and manipulate a singly linked list.       
+                 `,
+          },
           
           {
             id: "Integral",
@@ -103,6 +125,12 @@ document.addEventListener("alpine:init", () => {
             {
               icon: "./prog-sql.png",
               title: "SQL",
+              xp: "mid",
+            },
+            
+            {
+              icon: "./prog-c.png",
+              title: "C",
               xp: "mid",
             },
             {
