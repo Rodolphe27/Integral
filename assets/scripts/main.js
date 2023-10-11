@@ -46,7 +46,7 @@ document.addEventListener("alpine:init", () => {
             title: "Android_Fitness_App",
             github: "https://github.com/Rodolphe27/Andriod_Fitness_App",
             image:
-              "httpsimages.unsplash.comphoto-1554260570-c7068c223285ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1304&q=80",
+              "https://images.unsplash.com/photo-1554260570-c7068c223285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW5kcm9pZCUyMGZpdG5lc3MlMjBhcHB8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
             description: `
             This is a fitness app that I created in Collaboration with four other students for a school project. It is a simple app that allows you to track your daily activities and monitor your progress. It was built using Android Studio and Java.
             One of the main objective of this project was to learn how to work in a team using the SCRUM framework and gain insights into git and github.       
@@ -56,7 +56,7 @@ document.addEventListener("alpine:init", () => {
           {
             id: "Integral",
             title: "Integral",
-            github: "https://github.com/juliush-dev/xolve",
+            github: "https://github.com/Rodolphe27/Integral",
             image:
               "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             description: `
@@ -94,20 +94,16 @@ document.addEventListener("alpine:init", () => {
             },
           ],
           programming: [
-            {
-              icon: "./prog-php.png",
-              title: "PHP",
-              xp: "int",
-            },
+            
             {
               icon: "./prog-js.png",
               title: "Javascript",
-              xp: "int",
+              xp: "new",
             },
             {
               icon: "./prog-sql.png",
               title: "SQL",
-              xp: "int",
+              xp: "mid",
             },
             {
               icon: "./prog-java.png",
@@ -124,23 +120,15 @@ document.addEventListener("alpine:init", () => {
             {
               icon: "./tool-linux.png",
               title: "Linux",
-              xp: "int",
+              xp: "mid",
             },
             {
               icon: "./tool-win.png",
               title: "Windows",
               xp: "int",
             },
-            {
-              icon: "./tool-apache.png",
-              title: "Apche Web Server",
-              xp: "int",
-            },
-            {
-              icon: "./tool-git.png",
-              title: "Git & GitHub",
-              xp: "int",
-            },
+            
+            
             {
               icon: "./tool-365.png",
               title: "MS Suite",
