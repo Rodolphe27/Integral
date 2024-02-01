@@ -82,7 +82,37 @@ document.addEventListener("alpine:init", () => {
             image:
               "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             description: `
-            Yes! This website was a project I created while learning JavaScript in the past. I continue to update it as needed, and soon it will be transformed into a blog page. This platform will allow me to share more stories and provide insights into my day-to-day life. 🙂
+            Yes! This website is a project I am actually working on while learning JavaScript. I continue to update it as needed, and soon it will be transformed into a blog page. This platform will allow me to share more stories and provide insights into my day-to-day life. 🙂
+            `,
+          },
+          {
+            id: "VierGewinnt",
+            title: "VierGewinnt",
+            github: "https://github.com/Rodolphe27/VierGewinnt",
+            image:
+              "https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D",
+            description: `
+            This Java program implements a simplified version of the classic "Connect Four" game, known as "Vier Gewinnt" in German. The game is designed for two players who take turns dropping colored discs into a 6x7 grid, with the goal of connecting four discs of the same color in a row. Crafting this game was not only about creating entertainment but also seizing an opportunity to elevate my Java skills and revisit the fundamentals that form the backbone of my programming journey.
+            `,
+          },
+          {
+            id: "Csharp Event Patten",
+            title: "Csharp Event Pattern",
+            github: "https://github.com/Rodolphe27/C-Sharp-_Templates-and-Event-Pattern",
+            image:
+              "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvZGV8ZW58MHx8MHx8fDA%3D",
+            description: `
+            This C# program serves as a learning project for understanding the implementation of the event pattern and the usage of templates in C#. The system demonstrates a basic Fleet Management System using the Autos namespace. It maintains a fleet of vehicles, allowing users to add vehicles, calculate the average age of the fleet, and display inventory information
+            `,
+          },
+          {
+            id: "C++_Pointers",
+            title: "C++_Pointers",
+            github: "https://github.com/Rodolphe27/C-Pointers_Medien",
+            image:
+              "https://images.unsplash.com/photo-1592609931095-54a2168ae893?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvZGV8ZW58MHx8MHx8fDA%3D",
+            description: `
+            This C++ program demonstrates a basic media management system using an array of pointers and a linked list. It incorporates the concepts of polymorphism and dynamic memory allocation. The system handles two types of media: audio and images. A Makefile is provided for easy compilation and execution
             `,
           },
 
