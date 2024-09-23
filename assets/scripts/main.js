@@ -125,22 +125,22 @@ document.addEventListener("alpine:init", () => {
         content: {
           languages: [
             {
-              icon: "./flag-cam.png",
+              icon: "./assets/scripts/images_png/flag-cam.png",
               title: "Yemba",
               xp: "pro",
             },
             {
-              icon: "./lang-french.png",
+              icon: "./assets/scripts/images_png/lang-french.png",
               title: "French",
               xp: "pro",
             },
             {
-              icon: "./flag-german.png",
+              icon: "./assets/scripts/images_png/flag-german.png",
               title: "German",
               xp: "int",
             },
             {
-              icon: "./flag-uk.png",
+              icon: "./assets/scripts/images_png/flag-uk.png",
               title: "English",
               xp: "int",
             },
@@ -148,47 +148,47 @@ document.addEventListener("alpine:init", () => {
           programming: [
             
             {
-              icon: "./prog-js.png",
+              icon: "./assets/scripts/images_png/prog-js.png",
               title: "Javascript",
               xp: "new",
             },
             {
-              icon: "./prog-sql.png",
+              icon: "./assets/scripts/images_png/prog-sql.png",
               title: "SQL",
               xp: "mid",
             },
             
             {
-              icon: "./prog-c.png",
+              icon: "./assets/scripts/images_png/prog-c.png",
               title: "C",
               xp: "mid",
             },
             {
-              icon: "./prog-java.png",
+              icon: "./assets/scripts/images_png/prog-java.png",
               title: "Java",
               xp: "mid",
             },
             {
-              icon: "./prog-python.png",
+              icon: "./assets/scripts/images_png/prog-python.png",
               title: "Python",
               xp: "mid",
             },
           ],
           tools: [
             {
-              icon: "./tool-linux.png",
+              icon: "./assets/scripts/images_png/tool-linux.png",
               title: "Linux",
               xp: "mid",
             },
             {
-              icon: "./tool-win.png",
+              icon: "./assets/scripts/images_png/tool-win.png",
               title: "Windows",
               xp: "int",
             },
             
             
             {
-              icon: "./tool-365.png",
+              icon: "./assets/scripts/images_png/tool-365.png",
               title: "MS Suite",
               xp: "mid",
             },
