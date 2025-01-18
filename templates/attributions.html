@@ -1,0 +1,23 @@
+<template x-teleport="#attributions-content">
+    <div class="d-flex h-100">
+        <div class="w-100 flex-shrink-1 overflow-y-auto h-100 p-4 p-md-4">
+            <h1 class="mb-3 d-md-none">Attributions</h1>
+            <div class="d-flex flex-column me-md-5">
+                <div>
+                    <p>Made possible thanks to the contributions of:</p>
+                    <ul class="list-unstyled">
+                        <template x-for="attr in pages[4].content">
+                            <li class="my-3">
+                                💚 <a :href="attr.url" x-text="attr.label"></a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+                class="d-none d-md-flex flex-column text-center justify-content-center align-content-center w-50 h-100 flex-grow-0 fs-1 fw-bolder font-monospace bg-danger-subtle">
+            <i class="bi bi-wrench-adjustable-circle"></i> Attributions
+        </div>
+    </div>
+</template>
