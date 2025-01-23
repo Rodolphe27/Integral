@@ -59,12 +59,236 @@
                 </section>
             </template>
         </main>
-        <div id="templates-container"></div>
+        <template x-teleport="#about-me-content">
+            <div class="d-flex h-100">
+                <div class="w-100 flex-shrink-1 overflow-y-auto h-100 p-3 px-0 px-md-5 mb-5">
+                    <h1 class="mb-3 d-md-none">About me</h1>
+                    <p><span class="text-success mb-2 d-block">My name is <b>Rodolphe Loic Souassi Tatang</b>,</span>I
+                        discovered programming at a very young age and became fascinated by the
+                        limitless possibilities that could be accomplished with just an
+                        internet connection, a computer, and a combination of learning,
+                        thinking, applying, and patience. Since then, it has become my
+                        passion and calling. 🚀
+                    </p>
+                    <p>
+                        This marked the beginning of my journey to become a valuable asset
+                        for businesses of all scales, ranging from companies to individuals
+                        and the society as a whole. I aim to contribute to
+                        <span class="text-success">building and/or enhancing products</span>
+                        that meet their specific needs!
+                    </p>
+                    <p>
+                        From an early age, I took it upon myself to explore various
+                        programming-related topics, including
+                        <span class="text-success">app development, webpages and webapps creation, UI and
+                            UX design, databases, algorithms, best practices, intuitive
+                            solutions, effective communication, and more.</span>
+                    </p>
+
+                    <p>
+                        I began my computer science journey at Ruhr University of Bochum,
+                        where I had the opportunity to engage in significant projects.
+                        These projects included Android app development within a team utilizing the SCRUM framework, database management with PostgreSQL,
+                        and programming Linux-based system calls to gain a deeper understanding of process creation and synchronization in a multithreaded environment.
+                        Currently, I've transitioned to FH Dortmund to further enhance my practical experience in the field of computer science
+                    </p>
+                    <div class="bg-info-subtle p-3 rounded d-flex gap-3 mb-3">
+                        <p class="fw-bold text-black"><i class="bi bi-info-circle"></i></p>
+                        <p>
+                            Use the navigation menu at the top of the page to explore my
+                            website. I hope you have a great time! 🙂
+                        </p>
+                    </div>
+                    <div class="bg-info-subtle p-3 rounded d-flex gap-3 mb-5">
+                        <p class="fw-bold text-black"><i class="bi bi-info-circle"></i></p>
+                        <p>
+                            Don't hesitate to reach out if you need assistance with anything!
+                            I will be delighted to help you! 🙂
+                        </p>
+                    </div>
+                </div>
+                <div
+                        class="d-none d-sm-none d-md-flex flex-column text-center justify-content-center align-content-center w-50 h-100 flex-grow-0 fs-1 fw-bolder font-monospace bg-info-subtle">
+                    <i class="bi bi-info-circle"></i> About me
+                </div>
+            </div>
+        </template>
+        <template x-teleport="#projects-content">
+            <div class="d-flex h-100">
+                <div class="w-100 flex-shrink-1 overflow-y-auto h-100 p-4 p-md-4 mb-5">
+                    <h1 class="mb-4 d-md-none">Projects</h1>
+                    <div
+                            class="w-100 overflow-hidden overflow-y-auto d-flex gap-5 flex-column flex-md-row flex-wrap align-content-md-center mb-5">
+                        <template x-for="(project, index) in pages[1].content">
+                            <div class="card flex-md-fill flex-sm-grow-1 flex-md-grow-0 w-100" :id="project.id">
+                                <img :src="project.image" class="card-img-top" alt="project.id" />
+                                <div class="card-body">
+                                    <h5 class="card-title" x-text="project.title"></h5>
+                                    <p class="card-text" x-text="project.description"></p>
+                                    <template x-if="project.github.length > 0">
+                                        <div>
+                                            <span class="badge text-bg-success p-2 rounded-1 btn btn-sm"><i
+                                                    class="bi bi-door-open me-2"></i> Public</span>
+                                            <a :href="project.github" class="btn btn-sm btn-primary">See on GitHub</a>
+                                        </div>
+                                    </template>
+                                    <template x-if="project.github.length == 0">
+                                        <span class="badge text-bg-danger p-2"><i
+                                                class="bi bi-shield-lock-fill me-2"></i> Private</span>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div
+                        class="d-none order-first d-md-flex flex-column text-center justify-content-center align-content-center w-50 h-100 flex-grow-0 fs-1 fw-bolder font-monospace bg-success-subtle">
+                    <i class="bi bi-hammer"></i> Projects
+                </div>
+            </div>
+        </template>
+        <template x-teleport="#competences-content">
+            <div class="d-flex h-100">
+                <div class="w-100 flex-shrink-1 overflow-y-auto h-100 p-4 p-md-4 mb-5">
+                    <h1 class="mb-4 d-md-none">Competences</h1>
+                    <div class="d-flex flex-column w-100">
+                        <section>
+                            <h3 class="mb-3">
+                                <i class="bi bi-translate me-3"></i>Languages
+                            </h3>
+                            <template x-for="lang in pages[2].content.languages">
+                                <div class="border d-flex gap-3 p-3 rounded my-5 shadow-sm bg-body">
+                                    <div class="d-flex justify-content-center align-items-start"
+                                         style="width: 25px; height: 25px">
+                                        <img :src="lang.icon" class="w-100" />
+                                    </div>
+                                    <div class="d-flex flex-column gap-3 w-100">
+                                        <h6 x-text="lang.title"></h6>
+                                        <div class="flex-nowrap d-flex border w-100 gap-0 rounded-1  bg-body-tertiary">
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'new' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="new">new</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'mid' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="middle">mid</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'int' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="intermediate">int</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'pro' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="profi">pro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </section>
+                        <section>
+                            <h3 class="mb-3">
+                                <i class="bi bi-code-square me-3"></i>Programming
+                            </h3>
+                            <template x-for="lang in pages[2].content.programming">
+                                <div class="border d-flex gap-3 p-3 rounded my-5 shadow-sm bg-body">
+                                    <div class="d-flex justify-content-center align-items-start"
+                                         style="width: 25px; height: 25px">
+                                        <img :src="lang.icon" class="w-100" />
+                                    </div>
+                                    <div class="d-flex flex-column gap-3 w-100">
+                                        <h6 class="mb-3" x-text="lang.title"></h6>
+                                        <div class="flex-nowrap d-flex border w-100 gap-0 rounded-1  bg-body-tertiary">
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'new' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="new">new</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'mid' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="intermediate">mid</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'int' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="intance">int</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'pro' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="profi">pro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </section>
+                        <section>
+                            <h3 class="mb-3"><i class="bi bi-tools me-3"></i>Tools</h3>
+                            <template x-for="lang in pages[2].content.tools">
+                                <div class="border d-flex gap-3 p-3 rounded my-5 shadow-sm bg-body">
+                                    <div class="d-flex justify-content-center align-items-start"
+                                         style="width: 25px; height: 25px">
+                                        <img :src="lang.icon" class="w-100" />
+                                    </div>
+                                    <div class="d-flex flex-column gap-3 w-100">
+                                        <h6 class="mb-3" x-text="lang.title"></h6>
+                                        <div class="flex-nowrap d-flex border w-100 gap-0 rounded-1  bg-body-tertiary">
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'new' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="new">new</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'mid' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="intermediate">mid</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'int' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="intance">int</span>
+                                            <span class="px-3 py-1 flex-grow-1 text-center rounded"
+                                                  :class="lang.xp == 'pro' && 'text-bg-primary fw-semibold shadow'"
+                                                  title="profi">pro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </section>
+                    </div>
+                </div>
+                <div
+                        class="d-none d-md-flex flex-column text-center justify-content-center align-content-center w-50 h-100 flex-grow-0 fs-1 fw-bolder font-monospace bg-danger-subtle">
+                    <i class="bi bi-wrench-adjustable-circle"></i> Competences
+                </div>
+            </div>
+        </template>
+        <template x-teleport="#contact-me-content">
+            <div class="d-flex h-100">
+                <div
+                        class="d-flex gap-3 p-3 flex-column text-md-center justify-content-md-center align-content-md-center w-100 h-100 flex-grow-0 bg-warning-subtle p-4 p-md-0">
+                    <i class="d-none d-md-inline  bi-envelope-at" style="font-size: 2rem;"></i>
+                    <span>
+                        Can I do something for you 🙂?
+                    </span>
+                    <a class="fs-5" href="mailto:souassitatang@yahoo.com">Contact me</a>
+                </div>
+            </div>
+        </template>
+        <template x-teleport="#attributions-content">
+            <div class="d-flex h-100">
+                <div class="w-100 flex-shrink-1 overflow-y-auto h-100 p-4 p-md-4">
+                    <h1 class="mb-3 d-md-none">Attributions</h1>
+                    <div class="d-flex flex-column me-md-5">
+                        <div>
+                            <p>Made possible thanks to the contributions of:</p>
+                            <ul class="list-unstyled">
+                                <template x-for="attr in pages[4].content">
+                                    <li class="my-3">
+                                        💚 <a :href="attr.url" x-text="attr.label"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div
+                        class="d-none d-md-flex flex-column text-center justify-content-center align-content-center w-50 h-100 flex-grow-0 fs-1 fw-bolder font-monospace bg-danger-subtle">
+                    <i class="bi bi-wrench-adjustable-circle"></i> Attributions
+                </div>
+            </div>
+        </template>
+
 
 
 
         <script rel="text/javascript" src="assets/js/main.js"></script>
-        <script rel="text/javascript" src="assets/js/html-loader.js"></script>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
